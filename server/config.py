@@ -15,9 +15,15 @@ class BaseConfig:
     # flask base settings
     USE_MOCK_EQUIVALENCY = False
     DEBUG = False
-    # Flask settings
+
+    # sql-alchemy settings
+    SQLALCHEMY = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = None
+
+    # google
+    FIREBASE = False
+    GOOGLE_APPLICATION_CREDENTIALS = None
 
     # # scheduler settings
     # JOBS = [
@@ -32,6 +38,7 @@ class BaseConfig:
     #     "default": SQLAlchemyJobStore(url=f"sqlite:///{basedir}/ap-scheduler.db")
     # }
     # SCHEDULER_API_ENABLED = True
+
     # security
     JWT_SECRET_KEY = "ThisIsATest"
 
@@ -46,6 +53,13 @@ class DevelopmentConfig(BaseConfig):
     # sql-alchemy settings
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{basedir}/{APPLICATION_NAME}-Dev.db"
+
+    # google
+    FIREBASE = False
+    GOOGLE_APPLICATION_CREDENTIALS = None
+
+    # security
+    JWT_SECRET_KEY = "ICS-DEV-KEY"
 
     #  other
     TESTING = False
@@ -62,8 +76,15 @@ class TestingConfig(BaseConfig):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{basedir}/{APPLICATION_NAME}-Test.db"
 
+    # google
+    FIREBASE = False
+    GOOGLE_APPLICATION_CREDENTIALS = ""
+
     # other
     TESTING = True
+
+    # security
+    JWT_SECRET_KEY = "ThisIsATest"
 
 
 class ProductionConfig(BaseConfig):
@@ -76,6 +97,13 @@ class ProductionConfig(BaseConfig):
     # sql-alchemy settings
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{basedir}/{APPLICATION_NAME}-Prod.db"
+
+    # google
+    FIREBASE = False
+    GOOGLE_APPLICATION_CREDENTIALS = ""
+
+    # security
+    JWT_SECRET_KEY = "ThisIsATest"
 
     # other
     TESTING = False
