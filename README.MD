@@ -20,3 +20,15 @@
 ## to Test
 - import postman collection
 - start with post command to create some entities
+
+
+## speedrun installation
+- import postman collection
+- Install requirements.txt with "pip install -r requirements.txt" from env shell
+- open flask shell in env with "flask shell" as command
+- command: import os
+- command: os.environ["ENVIRONMENT"] = 'dev'
+- set wsgi.py as entrypoint/executable
+- set environment key "ENVIRONMENT" to 'dev','test','prod' 
+- run wsgi.py
+- run postman request deploy-db
