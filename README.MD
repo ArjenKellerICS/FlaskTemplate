@@ -1,4 +1,4 @@
-# TO use with Pycharm
+# To use with Pycharm and Postman
 
 ### author: Arjen Keller
 
