@@ -1,0 +1,4 @@
+- Install requirements.txt with python -r requirements.txt from env shell
+- open flask shell in env with "flask shell" as command
+- command: from server import db
+- command: db.create_all()
