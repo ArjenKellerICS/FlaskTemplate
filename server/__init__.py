@@ -1,6 +1,6 @@
 # imports
 import os
-from flask import Flask
+from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 # SQLAlchemy object
@@ -24,5 +24,13 @@ def create_server():
 
     # register all routing from other modules
     register_routes(server)
+
+    @server.route("/deploy-db/<secret_key>")
+    def deploy_db(secret_key):
+        if secret_key == server.config["SECRET_KEY"]:
+            db.create_all()
+            return jsonify(True)
+        else:
+            return jsonify(False)
 
     return server

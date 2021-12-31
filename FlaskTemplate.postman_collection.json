@@ -13,7 +13,21 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://127.0.0.1:5000/demos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"demos",
+								""
+							]
+						}
 					},
 					"response": [
 						{
@@ -131,6 +145,15 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\":\"ThisIsAtest\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/demos/1",
 							"protocol": "http",
@@ -150,6 +173,29 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "deploy-db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/deploy-db/PythonIsBeterDanVisualBah-Sick",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"deploy-db",
+						"PythonIsBeterDanVisualBah-Sick"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

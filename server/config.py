@@ -40,7 +40,7 @@ class DevelopmentConfig(BaseConfig):
     CONFIG_NAME = "dev"
 
     # flask settings
-    SECRET_KEY = os.getenv("DEV_SECRET_KEY", "Python is beter dan Visual Bah-sick")
+    SECRET_KEY = os.getenv("DEV_SECRET_KEY", "PythonIsBeterDanVisualBah-Sick")
     DEBUG = True
 
     # sql-alchemy settings
