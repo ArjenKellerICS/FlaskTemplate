@@ -17,12 +17,12 @@
 - run wsgi.py
 
 
-## to Test
+## To Test
 - import postman collection
 - start with post command to create some entities
 
 
-## speedrun installation
+## Speedrun Installation
 - import postman collection
 - Install requirements.txt with "pip install -r requirements.txt" from env shell
 - open flask shell in env with "flask shell" as command
