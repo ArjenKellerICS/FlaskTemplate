@@ -69,7 +69,7 @@ class TestingConfig(BaseConfig):
     CONFIG_NAME = "test"
 
     # flask settings
-    SECRET_KEY = os.getenv("TEST_SECRET_KEY", "Thanos did nothing wrong")
+    SECRET_KEY = os.getenv("TEST_SECRET_KEY", "Testing all your shizzle")
     DEBUG = True
 
     # sql-alchemy settings
@@ -91,7 +91,7 @@ class ProductionConfig(BaseConfig):
     CONFIG_NAME = "prod"
 
     # flask settings
-    SECRET_KEY = os.getenv("PROD_SECRET_KEY", "ICSPythonSuperDevs")
+    SECRET_KEY = os.getenv("PROD_SECRET_KEY", "PythonSuperDevs")
     DEBUG = False
 
     # sql-alchemy settings
