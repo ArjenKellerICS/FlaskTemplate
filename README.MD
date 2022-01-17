@@ -27,7 +27,7 @@
 - Install requirements.txt with "pip install -r requirements.txt" from env shell
 - open flask shell in env with "flask shell" as command
 - command: import os
-- command: os.environ["ENVIRONMENT"] = 'dev'
+- command: os.environ["ENVIRONMENT"] = 'dev' or 'prod' or 'test'
 - set wsgi.py as entrypoint/executable
 - set environment key "ENVIRONMENT" to 'dev','test','prod' 
 - run wsgi.py
