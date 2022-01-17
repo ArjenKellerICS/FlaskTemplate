@@ -28,7 +28,5 @@
 - open flask shell in env with "flask shell" as command
 - command: import os
 - command: os.environ["ENVIRONMENT"] = 'dev' or 'prod' or 'test'
-- set wsgi.py as entrypoint/executable
-- set environment key "ENVIRONMENT" to 'dev','test','prod' 
-- run wsgi.py
+- run flask runserver
 - run postman request deploy-db
